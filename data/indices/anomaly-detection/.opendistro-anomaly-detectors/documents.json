@@ -1,0 +1,70 @@
+{
+  "_id": "VEHKTXwBwf_U8gjUXY2s",
+  "name": "test-detector",
+  "description": "Test detector",
+  "time_field": "timestamp",
+  "indices": [
+    "server_log*"
+  ],
+  "filter_query": {
+    "bool": {
+      "filter": [
+        {
+          "range": {
+            "value": {
+              "from": 1,
+              "to": null,
+              "include_lower": false,
+              "include_upper": true,
+              "boost": 1
+            }
+          }
+        }
+      ],
+      "adjust_pure_negative": true,
+      "boost": 1
+    }
+  },
+  "detection_interval": {
+    "period": {
+      "interval": 1,
+      "unit": "Minutes"
+    }
+  },
+  "window_delay": {
+    "period": {
+      "interval": 1,
+      "unit": "Minutes"
+    }
+  },
+  "shingle_size": 8,
+  "schema_version": 0,
+  "feature_attributes": [
+    {
+      "feature_id": "U0HKTXwBwf_U8gjUXY2m",
+      "feature_name": "test",
+      "feature_enabled": true,
+      "aggregation_query": {
+        "test": {
+          "sum": {
+            "field": "value"
+          }
+        }
+      }
+    }
+  ],
+  "last_update_time": 1633392680364,
+  "user": {
+    "name": "admin",
+    "backend_roles": [
+      "admin"
+    ],
+    "roles": [
+      "own_index",
+      "all_access"
+    ],
+    "custom_attribute_names": [],
+    "user_requested_tenant": "__user__"
+  },
+  "detector_type": "SINGLE_ENTITY"
+}
