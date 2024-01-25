@@ -12,22 +12,13 @@
 import fs from 'fs';
 import path from 'path';
 import { ApiProviderFactory } from '../../providers/factory';
-import { QARunner } from '../../runners/qa/qa_runner';
-import { OpenSearchTestIndices } from '../../utils/indices';
+import { AlertingRunner } from '../../runners/alerting';
 
 const provider = ApiProviderFactory.create();
-const runner = new (class AlertingRunner extends QARunner {
-  protected async beforeAll(clusterStateId: string): Promise<void> {
-    if (clusterStateId !== 'alerting') {
-      throw new Error('unexpected cluster state id');
-    }
-    await OpenSearchTestIndices.delete('alerting');
-    await OpenSearchTestIndices.create('alerting');
-  }
-})(provider);
+const runner = new AlertingRunner(provider);
 
 const specDirectory = path.join(__dirname, 'specs');
-const specFiles = [path.join(specDirectory, 'get_alerts_tests.jsonl')];
+const specFiles = [path.join(specDirectory, 'search_alerts_tests.jsonl')];
 
 // was run once to generate the alerts tests in a test framework-compatible format
 // const jsonLines = fs.readFileSync(path.join(__dirname, '..', '..', '..', 'self-instruct', 'raw_alerting_tests.jsonl'), 'utf8');

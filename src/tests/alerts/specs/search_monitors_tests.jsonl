@@ -1,0 +1,2 @@
+{"id":"id-1","clusterStateId":"alerting","question":"How many alerting monitors do I have?","expectedAnswer":"You have 4 alerting monitors"}
+{"id":"id-2","clusterStateId":"alerting","question":"How many enabled alerting monitors do I have?","expectedAnswer":"There are no enabled alerting monitors"}
