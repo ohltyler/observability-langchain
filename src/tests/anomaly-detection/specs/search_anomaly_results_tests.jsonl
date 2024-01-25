@@ -1,0 +1,3 @@
+{"id":"id-1","clusterStateId":"anomaly-detection","question":"How many anomaly results do I have?","expectedAnswer":"You have 1 anomaly result"}
+{"id":"id-2","clusterStateId":"anomaly-detection","question":"How many anomaly results do I have from detector test-detector-1?","expectedAnswer":"You have 1 anomaly result from test-detector-1"}
+{"id":"id-3","clusterStateId":"anomaly-detection","question":"How many anomaly results do I have from detector test-detector-2?","expectedAnswer":"There are no anomaly results from test-detector-2"}
