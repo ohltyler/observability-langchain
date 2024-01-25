@@ -29,7 +29,7 @@ const specFiles = [path.join(specDirectory, 'search_alerts_tests.jsonl')];
 // s is a list, each element is a JSON object representing each line of the original raw_alerting_tests.jsonl
 
 // fs.writeFile(
-//   '/Users/toepkerd/Documents/Olly-Project/observability-langchain/src/tests/specs/get_alerts_tests.jsonl',
+//   '/Users/toepkerd/Documents/Olly-Project/observability-langchain/src/tests/specs/search_alerts_tests.jsonl',
 //   s
 //     .map((line) => JSON.stringify({ id: nanoid(), clusterStateId: 'alerting', question: line.Input, expectedAnswer: line.Output, }))
 //     .join('\n'),
@@ -251,7 +251,7 @@ function populateAlertDocTimestamps() {
 
 function populateTestCaseTimes() {
   const templateLines = fs.readFileSync(
-    path.join(__dirname, 'templates', 'get_alerts_test_templates.jsonl'),
+    path.join(__dirname, 'templates', 'search_alerts_test_templates.jsonl'),
     'utf8',
   );
   const templateLinesList = templateLines.split('\n');
@@ -261,7 +261,7 @@ function populateTestCaseTimes() {
   }
 
   fs.writeFileSync(
-    path.join(__dirname, 'specs', 'get_alerts_tests.jsonl'),
+    path.join(__dirname, 'specs', 'search_alerts_tests.jsonl'),
     templateLinesList.join('\n'),
   );
 }
