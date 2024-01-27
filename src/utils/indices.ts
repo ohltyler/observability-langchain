@@ -111,7 +111,7 @@ export class OpenSearchTestIndices {
     const objList = ndjson.split('\n').filter((doc) => doc);
 
     let bulkBody;
-    if (group === 'alerting') {
+    if (group === 'alerting' || group === 'anomaly-detection') {
       bulkBody = objList.flatMap((doc) => {
         const spec = JSON.parse(doc) as { id: string };
         return [{ index: { _index: name, _id: spec.id } }, spec];
