@@ -10,7 +10,7 @@
 {"id":"id-10","clusterStateId":"anomaly-detection","question":"What is the total number of high cardinality detectors?","expectedAnswer":"You have one total high-cardinality detector: test-detector-4"}
 {"id":"id-11","clusterStateId":"anomaly-detection","question":"When was detector test-detector-1 last updated?","expectedAnswer":"test-detector-1 was last updated on 1234"}
 {"id":"id-12","clusterStateId":"anomaly-detection","question":"What type of detector is test-detector-1?","expectedAnswer":"test-detector-1 is a single entity detector."}
-{"id":"id-13","clusterStateId":"anomaly-detection","question":"What is the name of the detector with id \"test-detector-1\"?","expectedAnswer":"The name of that detector is test-detector-1."}
+{"id":"id-13","clusterStateId":"anomaly-detection","question":"What is the id of the detector with name \"test-detector-1\"?","expectedAnswer":"The id of that detector is test-detector-1-id."}
 {"id":"id-14","clusterStateId":"anomaly-detection","question":"Are there any detectors detecting over the index \"test-index\"?","expectedAnswer":"Yes, you have 4 detectors detecting over the index test-index."}
 {"id":"id-15","clusterStateId":"anomaly-detection","question":"Are there any detectors detecting over the index \"foo-index\"?","expectedAnswer":"No, there are no detectors detecting over that index."}
 {"id":"id-16","clusterStateId":"anomaly-detection","question":"What is the name of my high-cardinality detectors?","expectedAnswer":"You have one high-cardinality detector named test-detector-4"}

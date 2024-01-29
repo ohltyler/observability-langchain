@@ -17,4 +17,4 @@
 {"id":"id-17","clusterStateId":"anomaly-detection","question":"How many anomalies occurred for detector test-detector-1-id between 1111 and 2222?","expectedAnswer":"I found one anomaly result from that detector in the time range of 1111 and 2222"}
 {"id":"id-18","clusterStateId":"anomaly-detection","question":"Show me the top 10 highest-grade anomalies I have","expectedAnswer":"Here is details on your anomaly results: [detectorId=test-detector-1-id,grade=0.5,confidenc=0.8]"}
 {"id":"id-19","clusterStateId":"anomaly-detection","question":"Show me the top 10 highest-grade anomalies with data start times between 1111 and 2222.","expectedAnswer":"Here is details on your anomaly results: [detectorId=test-detector-1-id,grade=0.5,confidenc=0.8]"}
-{"id":"id-20","clusterStateId":"anomaly-detection","question":"Fetch me all alerts from the past week","expectedAnswer":"You have no anomaly results from the past week."}
+{"id":"id-20","clusterStateId":"anomaly-detection","question":"Fetch me all anomaly results from the past week","expectedAnswer":"You have no anomaly results from the past week."}
